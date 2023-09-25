@@ -16,7 +16,15 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from main.views import camera_source_view, stream_view, main_view, archive_view
+from registration.views import login_view, registration_view
 
 urlpatterns = [
+    path('login/', login_view, name='login-view'),
+    path('registration/', registration_view, name='registration-view'),
+    path('camera_source/', camera_source_view, name='camera-source'),
+    path('stream/', stream_view, name='stream'),
+    path('main_page/', main_view, name='main-view'),
+    path('archive/', archive_view, name='archive-view'),
     path('admin/', admin.site.urls),
 ]
