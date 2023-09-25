@@ -1,5 +1,5 @@
 """
-URL configuration for chiken_gun project.
+URL configuration for web_app project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/4.2/topics/http/urls/
@@ -16,15 +16,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from camera_app.views import camera_source_view, stream_view, main_view, archive_view
-from registration.views import login_view, registration_view
 
 urlpatterns = [
-    path('login/', login_view, name='login-view'),
-    path('registration/', registration_view, name='registration-view'),
-    path('camera_source/', camera_source_view, name='camera-source'),
-    path('stream/', stream_view, name='stream'),
-    path('main_page/', main_view, name='main-view'),
-    path('archive/', archive_view, name='archive-view'),
     path('admin/', admin.site.urls),
 ]
